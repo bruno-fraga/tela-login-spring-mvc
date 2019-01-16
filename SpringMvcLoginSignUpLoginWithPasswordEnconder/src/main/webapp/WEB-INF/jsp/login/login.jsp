@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" url="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,9 +39,18 @@
 		        <td>
 		        	<input type ="checkbox" name="remember-me" />
 		        <td/>
+		        <tr>
+		        <td><td/>
 		        
+		        <td>
+		        	<button type="submit" >Login</button>
+		        <td/>
 		    <tr/>
-		
+		    <tr>
+		    	<td><td/>
+		    	<td>
+		    		<a href='<c:url value= "/user/signup"/>'>Sign Up</a>
+		    	<td/>
 		</table>
 	
 	
