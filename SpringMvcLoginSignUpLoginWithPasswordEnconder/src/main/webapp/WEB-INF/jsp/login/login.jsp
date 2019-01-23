@@ -52,17 +52,6 @@
 		    		<a href='<c:url value= "/user/signup"/>'>Sign Up</a>
 		    	<td/>
 		</table>
-	
-	
-	
-	
-	
-	
-	
 	</form>
-
-
-
-
 </body>
 </html>

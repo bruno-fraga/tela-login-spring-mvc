@@ -12,11 +12,16 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import springmvc_example.form.UserForm;
 import springmvc_example.model.UserInfo;
 import springmvc_example.service.UserService;
+import springmvc_example.validator.SignupValidator;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
-
+    
+	@Autowired
+	SignupValidator signupValidator;
+	
+	
 	@Autowired
 	UserService userService;
 
@@ -57,6 +62,8 @@ public class UserController {
 	public String register(@ModelAttribute("userForm") UserForm userForm, BindingResult result,
 			RedirectAttributes redirectAttributes) {
 
+		signupValidator.validate(userForm, result);
+		
 		if (result.hasErrors()) {
 			return "/user/signup";
 		} else {

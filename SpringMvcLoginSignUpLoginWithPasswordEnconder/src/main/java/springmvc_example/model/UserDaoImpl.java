@@ -80,7 +80,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	public boolean userExists(String username) {
-		String sql = "selec * from users where username= :username";
+		String sql = "select * from users where username= :username";
 		
 		List<UserInfo>list = namedParameterJdbcTemplate.query(sql, getSqlParameterSource(username,  null), new UserMapper());
 		
